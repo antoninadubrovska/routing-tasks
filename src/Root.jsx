@@ -11,6 +11,7 @@ function Root() {
 					<Link to="/products"> Produkter </Link>
 				</div>
 			</header>
+			
 			<main>
 				<Outlet />
 			</main>

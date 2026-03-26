@@ -1,8 +1,29 @@
+import { useParams, useLoaderData, Link } from "react-router";
+
 const Details = () => {
+	const { id } = useParams();
+	const toothbrushes = useLoaderData();
+
+	const item = toothbrushes.find((t) => t.id === Number(id));
+	if (!item) {
+		console.log("Hittade inte produkten.. ", id, toothbrushes);
+		// console.log('id har datatypen: ', typeof id)
+
+		return <div className="details"> Kunde inte visa produkten. </div>;
+	}
+
+
+
+
+
+
 	return (
-		<div>
-			<h2> detaljsidan </h2>
-			<p> en specifik produkt </p>
+		<div className="details">
+			<h3> {item.name} </h3>
+			<p> {item.price} kr </p>
+			<p> Här skulle mer information om produkten stått... </p>
+			<p> TODO: link back to products view </p>
+			{/* (-1) */}
 		</div>
 	);
 };
