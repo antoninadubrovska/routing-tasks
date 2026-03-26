@@ -1,4 +1,5 @@
 import { useParams, useLoaderData, Link } from "react-router";
+import "./details.css";
 
 const Details = () => {
 	const { id } = useParams();
@@ -21,8 +22,8 @@ const Details = () => {
 		<div className="details">
 			<h3> {item.name} </h3>
 			<p> {item.price} kr </p>
-			<p> Här skulle mer information om produkten stått... </p>
-			<p> TODO: link back to products view </p>
+			<p> Mer information om produkten... </p>
+			{/* <p> TODO: link back to products view </p> */}
 			{/* (-1) */}
 		</div>
 	);

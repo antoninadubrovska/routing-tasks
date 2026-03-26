@@ -2,9 +2,9 @@ import Root from "./Root";
 import Start from "./pages/Start";
 import Products from "./pages/Products";
 import About from "./pages/About";
-// import Details from "./pages/Details"
+import Details from "./pages/Details"
 import { tandborstar } from "./data/products";
-import { Component } from "react";
+//import { Component } from "react";
 
 export const routes = [
 	{
@@ -21,7 +21,14 @@ export const routes = [
 
 				Component: Products,
 			},
-			//  { path: "/products/:id", Component: Details },
+			{
+				path: "/products/:id",
+				loader: async () => {
+					return tandborstar;
+				},
+
+				Component: Details
+			}
 		],
 	},
 ];

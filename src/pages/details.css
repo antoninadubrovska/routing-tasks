@@ -1,0 +1,14 @@
+h3{
+	color: var(--accent-bg);
+	font-size: 1.4em;
+	font-weight: 600;
+	margin: 1em;
+}
+
+p{
+	color: var(--accent-bg);
+	font-size: 1.1em;
+	font-weight: 400;
+	line-height: 1.4em;
+	margin: 0 1em;
+}

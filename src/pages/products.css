@@ -9,7 +9,7 @@
 
 	.product-list {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
 		gap: 0.6em;
 		color: var(--accent-bg);
 		font-weight: 600;
