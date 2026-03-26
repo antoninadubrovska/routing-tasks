@@ -1,9 +1,9 @@
 :root {
-	--header-bg: rgb(64, 126, 64);
-	--main-bg: rgb(182, 233, 182);
-	--main-bg-alternate: rgb(159, 227, 159);
-	--accent-bg: rgb(89, 124, 228);
-	--accent-fg: white;
+	--header-bg: rgb(79, 149, 157);
+	--main-bg: rgb(246, 248, 213);
+	--main-bg-alternate: rgb(152, 210, 192);
+	--accent-bg: rgb(32, 87, 129);
+	--accent-fg: rgb(246, 248, 213);
 }
 
 
@@ -13,30 +13,41 @@
 	min-height: 100vh;
 
 	header {
-		background-color: rgb(148, 200, 240);
+		background-color: var(--header-bg);
 		padding: 0.25em 2em;
+
+		h1{
+			margin: 1em;
+		}
 
 		.nav-links {
 			display: flex;
 			gap: 1.2em;
-			margin-bottom: 0.6em;
+			margin:0.6em;
 
 			a {
-				background-color: rgb(87, 177, 246);
+				background-color: var(--accent-bg);
 				padding: 0.15em 1em;
 				border-radius: 0.25em;
-				transition: 0.5s box-shadow;
+				transition: 0.3s box-shadow;
+				padding: 0.4em 1em;
+				color: var(--accent-fg);
+				text-decoration: none;
 
-				/* &:hover {
-					box-shadow: 0 0 0.2em 0.3em rgb(107, 142, 248);
-				} */
+				&:hover {
+					box-shadow: 3px 2px 0.25em var(--accent-bg);
+				}
 			}
 		}
 	}
 
 	main {
-		background-color: rgb(190, 217, 237);
+		background-color: var(--main-bg);
 		flex-grow: 1;
 		padding: 0.25em 2em;
+
+
+
+
 	}
 }

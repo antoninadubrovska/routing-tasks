@@ -1,18 +1,43 @@
 .products {
 
+	h2{
+		color: var(--accent-bg);
+		font-size: 1.4em;
+		font-weight: 600;
+		margin: 1em;
+	}
+
 	.product-list {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(6em, 1fr));
-		gap: 0.4em;
+		grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
+		gap: 0.6em;
+		color: var(--accent-bg);
+		font-weight: 600;
+
+		a {
+			text-decoration: none;
+			color: var(--accent-fg);
+
+			&:hover {
+				color: var(--accent-bg);
+			}
+		}
 	}
 
 	.card-item {
 		display: flex;
 		flex-direction: column;
 		border: 1px solid var(--header-bg);
-		box-shadow: 4px 2px 0.15em var(--header-bg);
+		box-shadow: 2px 1px 0.25em var(--header-bg);
 		border-radius: 0.2em;
 		text-align: center;
 		background-color: var(--main-bg-alternate);
+		padding: 1em;
+		transition: 0.3s box-shadow;
+
+		&:hover {
+			box-shadow: 3px 2px 0.4em var(--header-bg);
+
+		}
 	}
 }
