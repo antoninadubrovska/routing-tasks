@@ -1,0 +1,18 @@
+.products {
+
+	.product-list {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(6em, 1fr));
+		gap: 0.4em;
+	}
+
+	.card-item {
+		display: flex;
+		flex-direction: column;
+		border: 1px solid var(--header-bg);
+		box-shadow: 4px 2px 0.15em var(--header-bg);
+		border-radius: 0.2em;
+		text-align: center;
+		background-color: var(--main-bg-alternate);
+	}
+}

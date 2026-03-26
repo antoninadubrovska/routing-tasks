@@ -1,12 +1,10 @@
 import { useLoaderData } from "react-router";
 import ProductItem from "../components/ProductItem";
-
-
+import "./products.css";
 
 const Products = () => {
-
-	const toothbrushes = useLoaderData()
-	console.log("toothbrushes: ", toothbrushes)
+	const toothbrushes = useLoaderData();
+	console.log("toothbrushes: ", toothbrushes);
 
 	return (
 		<div className="products">
@@ -20,4 +18,4 @@ const Products = () => {
 	);
 };
 
-export default Products
+export default Products;

@@ -5,7 +5,6 @@ import Products from "./pages/Products";
 import { tandborstar } from "./data/products";
 import { Component } from "react";
 
-
 export const routes = [
 	{
 		path: "/",
