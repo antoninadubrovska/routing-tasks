@@ -1,5 +1,8 @@
 import { useParams, useLoaderData, useNavigate, Link } from "react-router";
 import "./details.css";
+import ProductItem from "../components/ProductItem";
+//import { match } from
+
 
 const Details = () => {
 	const navigate = useNavigate();
@@ -16,7 +19,7 @@ const Details = () => {
 
 	const goBack = (event) => {
 		event.preventDefault();
-		//window.history.back(); 
+		//window.history.back();
 		navigate(-1);
 	};
 
@@ -28,7 +31,7 @@ const Details = () => {
 
 			<p>
 				{" "}
-				<a href="/products" onClick={goBack}>
+				<a className="backToProducts" href="/products" onClick={goBack}>
 					{" "}
 					Tillbaka till produkterna{" "}
 				</a>{" "}
