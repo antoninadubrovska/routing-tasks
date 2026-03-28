@@ -1,7 +1,8 @@
-import { useParams, useLoaderData, Link } from "react-router";
+import { useParams, useLoaderData, useNavigate, Link } from "react-router";
 import "./details.css";
 
 const Details = () => {
+	const navigate = useNavigate();
 	const { id } = useParams();
 	const toothbrushes = useLoaderData();
 
@@ -13,18 +14,25 @@ const Details = () => {
 		return <div className="details"> Kunde inte visa produkten. </div>;
 	}
 
-
-
-
-
+	const goBack = (event) => {
+		event.preventDefault();
+		//window.history.back(); 
+		navigate(-1);
+	};
 
 	return (
 		<div className="details">
 			<h3> {item.name} </h3>
 			<p> {item.price} kr </p>
 			<p> Mer information om produkten... </p>
-			{/* <p> TODO: link back to products view </p> */}
-			{/* (-1) */}
+
+			<p>
+				{" "}
+				<a href="/products" onClick={goBack}>
+					{" "}
+					Tillbaka till produkterna{" "}
+				</a>{" "}
+			</p>
 		</div>
 	);
 };
